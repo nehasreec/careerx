@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix-login</title>
+    <style>
+        body{
+            background-color: black;
+        }
+        .container-1{
+            background-image: url("/image/netflix1.jpg");
+            background-size: cover;
+            height:590px;
+            width:1240px;
+
+        }
+        .c-b1{
+            height:80px;
+            padding: 20px;
+            display:flex;
+            justify-content: space-between;
+            margin-left: 150px;
+            margin-right: 150px;
+            
+        }
+        .logo{
+            width:150px;
+            height:60px;
+            
+        }
+        .c-b12{
+            display: flex;
+            justify-content: space-evenly;
+        }
+        .sign-in{
+            margin-left: 5px;
+            height:42px;
+            width:78px;
+            background-color:rgb(227, 40, 40) ;
+            border:none;
+            border-radius: 4px;
+            color: white;
+            font-size: 16px;
+        }
+        .lang{
+            height:42.45px;
+            width: 126px;
+            background-color:transparent ;
+            color: white;
+            border-radius:4px;
+
+        }
+        .c-b2{
+            margin-left: 200px;
+            margin-right: 200px;
+            margin-top: 80px;
+            
+            height:245px;
+            padding: 10px;
+            color: white;
+            text-align: center;
+        }
+        .e-container{
+            
+            display:flex;
+            justify-content: center;
+            
+        }
+        input[type="email"]{
+            padding: 3px;
+            color: white;
+            width: 460px;
+            height:45px;
+            border: 1px solid grey;
+            border-radius: 5px;
+            font-size: 18px;
+            background-color: transparent;
+    
+        }
+        .get-started{
+            color: white;
+            background-color:rgb(219, 31, 31);
+            border: none;
+            border-radius:4px;
+            margin-left: 15px;
+            width:150px;
+            font-size: 20px;
+        }
+        option{
+            color:black;
+          
+        }
+        .heading{
+            font-size: 50px;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        p{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        h3{
+            font-family:sans-serif;
+            font-size: 17px;
+        }
+        .container-2 , .container-3{
+        
+            border-top: 4px;
+            display:flex;
+            padding:150px;
+            border-top: 5px solid grey;
+            color:white;
+        }
+        .c-b21 , .c-b31{
+            width:400px;
+            height:200px ;
+        }
+        .c-b22 , .c32{
+            margin-left: 100px;
+            height:200px;
+            
+        }
+        .block1-h{
+            font-size: 40px;
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .block1-p{
+            font-size: 20px;
+            text-align: center;
+        }
+      
+
+
+
+    </style>
+</head>
+<body>
+    <div class="container-1">
+        <div class="c-b1">
+            
+            <img class="logo" src="/image/netflix-logo.png">
+                        
+           <div class="c-b12">
+                <div class="lang">
+                        <select class="lang">
+                            <option>
+                                <i class="fa-solid fa-language"></i>English</option>
+                            <option>हिन्दी</option>
+                        </select>
+                </div>
+                <button class="sign-in">Sign in</button>
+            
+           </div>
+        </div> 
+
+        <div class="c-b2">
+            <h1 class="heading">Laughter. Tears. Thrills. Find it all on Netflix.</h1>
+            <P>Endless entertainment starts at just ₹149. Cancel anytime.</P>
+            <h3>Ready to watch? Enter your email to create or restart your membership.</h3>
+            <div class="e-container">
+                
+                <input type="email" placeholder="Email Address">
+                <button class="get-started">Get Started</button>
+            </div>
+        </div>
+    </div>
+    <div class="container-2">
+        <div class="c-b21">
+            <h2 class="block1-h">Enjoy you TV</h2>
+            <p class="block1-p">Watch on smart TVs, PlayStation, Xbox, Chromecast, Apple TV, Blu-ray players and more.</p>
+        </div>
+        <div class="c-b22">
+            <video autoplay loop muted>
+                <source src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-tv-in-0819.m4v" type="video/mp4">
+            </video>
+        </div>
+
+    </div>
+    <div class="container-3">
+        <div class="c-b31">
+            <img src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/mobile-0819.jpg" >
+            
+        </div>
+        <div class="c-b32">
+            <h2 class="block1-h">Download your shows to watch offline</h2>
+            <p class="block1-p">Save your favourites easily and always have something to watch.</p>
+        </div>
+
+    </div>
+</body>
+</html>

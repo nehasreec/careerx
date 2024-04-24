@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function f1(){
+            let x=t1.value;
+            let y=t2.value;
+            if(x>y)
+            {
+                lbl.innerHTML= `${x} is greater`;
+            }
+            else if(y>x){ 
+                lbl.innerHTML= `${y} is greater`;
+            }
+            else{
+                lbl.innerHTML= `${x} ${y} are equal`;
+
+            }
+        }
+    </script>
+</head>
+<body>
+    <p><input type="text" id="t1"></p>
+    <p><input type="text" id="t2"></p>
+    <button onclick="f1()">Submit</button>
+    <p><lable id="lbl"></lable></p>
+    
+</body>
+</html>
