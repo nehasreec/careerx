@@ -4,27 +4,20 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Assignment-8</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
     <link rel="stylesheet" href="./style.css" />
-    <link rel="script" href="script.js" />
     <script>
-      let a = () => {
-        let div = document.getElementById("mainid");
-        let div1 = document.getElementById("hiddendiv");
-        div.style.opacity = 0.35;
-        div1.style.visibility = "visible";
-      };
-      a();
-      
-      function backtohome() {
-        let div = document.getElementById("mainid");
-        let div1 = document.getElementById("hiddendiv");
-        div.style.opacity = 1;
-        div1.style.visibility = "hidden";
-        }
+      function showsignup() {
+        let div = document.getElementById("hiddendiv");
+        let div1 = document.getElementById("mainid");
+        div.style.visibility = "visible";
+        div1.style.opacity = 0.35;
+      }
+      function closethis() {
+        let kk = document.getElementById("hiddendiv");
+        let pp = document.getElementById("mainid");
+        kk.style.visibility = "hidden";
+        pp.style.opacity = 1;
+      }
     </script>
   </head>
   <body>
@@ -36,13 +29,11 @@
               <h2>Sign Up</h2>
               <p>It's quick and easy</p>
             </div>
-            <div style="cursor: pointer" class="icon">
+            <div onclick="closethis()" style="cursor: pointer" id="icon">
               <img
                 src="https://static.xx.fbcdn.net/rsrc.php/v3/yO/r/zgulV2zGm8t.png"
                 alt=""
-                onclick="b()"
               />
-              <!-- <i class="fa fa-times" aria-hidden="true"></i> -->
             </div>
           </div>
           <hr />
@@ -58,7 +49,7 @@
               <input type="text" placeholder="Surname" />
             </div>
             <input type="text" placeholder="Mobile number or email address" />
-            <input type="text" placeholder="New password" name="" id="" />
+            <input type="password" placeholder="New password" name="" id="" />
           </div>
           <div class="DOB">
             <h6>Date of Birth</h6>
@@ -111,7 +102,9 @@
               <button>Login</button><br />
               <a href="#">Forgotten Password?</a>
               <hr />
-              <button onclick="a()" id="create">Create a New Account</button>
+              <button onclick="showsignup()" id="ccc">
+                Create a New Account
+              </button>
             </div>
             <div class="ptext">
               <a href="#"><b>Create a Page</b></a> for a celebrity,brand or

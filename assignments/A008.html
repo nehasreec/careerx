@@ -3,21 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Facebook-login</title>
     <script>
-         let a = () => {
-        let div = document.getElementById("mainid");
-        let div1 = document.getElementById("hiddendiv");
-        div.style.opacity = 0.35;
-        div1.style.visibility = "visible";
-      };
-      a();
-      function backtohome() {
-        let div = document.getElementById("mainid");
-        let div1 = document.getElementById("hiddendiv");
-        div.style.opacity = 1;
-        div1.style.visibility = "hidden";
+        function mainhidden(){
+            let div=document.getElementById("page2");
+            let div1=document.getElementById("page1");
+            div.style.visibility="visible";
+            div1.style.opacity = 0.35;
         }
+
+        function mainvisible(){
+            let div2=document.getElementById("page2");
+            let div3=document.getElementById("page1");
+            div2.style.visibility="hidden";
+            div3.style.opacity=1;
+        }
+    
     </script>
     
     <style>
@@ -46,7 +47,7 @@
             color:#333;
         }
         .login{
-            /* flex-direction:column; */
+            
             margin-top: 150px;
             background-color:#fff;
             border: 1px solid #fff;
@@ -88,15 +89,17 @@
 
         }
        .Sign-up{
-            border-radius: 5px;
+        margin-top: 30px;
+            align-items: center;
+            border-radius: 10px;
             padding:15px;
             background-color:#fff;
             width:350px;
             height: 450px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            
 
        }
+       
        .sign-b1 .input [type=text]{
             border:none;
             padding:3px;
@@ -114,11 +117,17 @@
         background-color: transparent;
         font-family: Arial, Helvetica, sans-serif;
        }
+       #page2 {
+            z-index: 1002;
+          
+            visibility: hidden;
+       }
+       
        
     </style>
 </head>
 <body>
-        <div id="mainid" class="main">
+        <div id="page1" class="main">
             <div class="fb-logo">
                 
                     <img src="	https://static.xx.fbcdn.net/rsrc.php/y1/r/4lCu2zih0ca.svg">
@@ -133,35 +142,39 @@
                 <center><a  href="#" >Forgotten password ?</a><br></center>
                 <hr>
                 <br>
-                <center><button class="b2" onclick="a()">Create Account</button></center>
+                <center><button class="b2" onclick="mainhidden()">Create Account</button></center>
             </div>
         </div>
-        <div id="hiddendiv" class="Sign-up">
-            <h2 style="background-color: transparent;">Sign Up</h2>
-            <div class="signtext">It's quick and easy</div>
-            <hr>
-            <div class="sign-b1">
-                <input type="text" placeholder="First name">
-                <input type="text" placeholder="Surname">
+        <center>
+        <div id="page2" class="Sign-up">
+            <div class="centerdiv">
+                <h2 style="background-color: transparent;">Sign Up</h2>
+                <div class="signtext">It's quick and easy</div>
+                <hr>
+                <div class="sign-b1">
+                    <input type="text" placeholder="First name">
+                    <input type="text" placeholder="Surname">
+                </div>
+                <div class="sign-b2">
+                    <input type="email" placeholder="Mobile number or email address">
+                    <input type="password" placeholder="New Password">
+                    
+                </div>
+                <div class="sign-b3">
+                    
+                    <h3>Gender</h3>
+                    Female<input type="radio" id="gender" required>
+                    Male<input type="radio" id="gender" required>
+                    Custom<input type="radio" id="gender" required>
+                    
+                </div>
+                <p>People who use our service may have uploaded your contact information to Facebook. <a href="#">Learn more</a>.
+                </p>
+                <P>By clicking Sign Up, you agree to our <a href="#">Terms</a>,<a href="#"> Privacy Policy </a>and <a href="#">Cookies Policy.</a> You may receive SMS notifications from us and can opt out at any time.</P>
+                <button onclick="mainvisible()">Sign Up</button>
             </div>
-            <div class="sign-b2">
-                <input type="email" placeholder="Mobile number or email address">
-                <input type="password" placeholder="New Password">
-                
-            </div>
-            <div class="sign-b3">
-                
-                <h3>Gender</h3>
-                Female<input type="radio" id="gender" required>
-                Male<input type="radio" id="gender" required>
-                Custom<input type="radio" id="gender" required>
-                
-            </div>
-            <p>People who use our service may have uploaded your contact information to Facebook. <a href="#">Learn more</a>.
-            </p>
-            <P>By clicking Sign Up, you agree to our <a href="#">Terms</a>,<a href="#"> Privacy Policy </a>and <a href="#">Cookies Policy.</a> You may receive SMS notifications from us and can opt out at any time.</P>
-            <button onclick="backtohome()">Sign Up</button>
         </div>
+        </center>
     
 </body>
 </html>
