@@ -7,6 +7,19 @@
     <script>
         function fnc(){
             p1.innerHTML ="Hello world" ;
+            // let p1=documenr.getElementById("p1")
+            // p1.innerHTML="Hello World";
+        //    document.getElementById("p1").innerHTML="Good Morning";
+        //    document.querySelector("#p1").innerHTML="Good eVENING";
+           let msg=document.getElementById("p1")
+        let messages=document.getElementsByTagName("p")
+        // console.log(msg)
+        
+        messages.forEach((value , index , arr)=>{
+            messages[index].background="pink";
+        })
+        msg.style.background="yellow"
+        console.log(messages) 
             
         }
     </script>
@@ -15,6 +28,13 @@
     <p id="p1">
         This is a paragraph
     </p>
+    <p id="p2">
+        This is a paragraph
+    </p>
+    <p id="p3">
+        This is a paragraph
+    </p>
+
     <button onclick="fnc()">Click</button>
 </body>
 </html>
