@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function login() {
+            // lbl.innerHTML="Hello World"
+            let strEmail=document.getElementById("txtEmail")
+            let strPw=document.getElementById("txtPw")
+            let found=users.find((value) => {
+                return value.email === strEmail.value && value.pass === strPw.value;
+            })
+            
+            // if(strEmail.value==="Nehasree@gmail.com" && strPw.value==="12345")
+            if(found)
+            {
+                let strName=found.name
+                lbl.innerHTML=`Hello ${strName}`;
+                // lbl.innerHTML=`Hello ${strEmail.value}`
+            } 
+            else{
+                lbl.innerHTML="Access Denied";
+            }
+        }
+        const users = [];
+        function register(){
+            const obj={};
+            obj.name=txtRegName.value;
+            obj.email=txtRegEmail.value;
+            obj.pass=txtRegPw.value;
+            users.push(obj);
+            console.log(users);
+            // lblUsers.innerHTML=JSON.stringify(users);
+        }
+    </script>
+</head>
+<body>
+    <h3>Login here </h3>
+    <p><label id="lbl"></label></p>
+    <p><input type="email" id="txtEmail"placeholder="Enter Username"></p>
+    <p><input type="password" id="txtPw" placeholder="Enter Password"> </p>
+    <button onclick="login()">Login</button>
+
+    <h3>Register here </h3>
+    <p><label id="lblReg"></label></p>
+    <p><input type="text" id="txtRegName"placeholder="Enter Username"></p>
+    <p><input type="email" id="txtRegEmail"placeholder="Enter Email"></p>
+    <p><input type="password" id="txtRegPw" placeholder="Enter Password"> </p>
+    <button onclick="register()">Register</button>
+
+    <label id="lblUsers"></label>
+    
+</body>
+</html>

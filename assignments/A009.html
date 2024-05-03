@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function fnc(){
+            for(let i=0;i<5;i++){
+                let num1=Math.round(Math.random()*10);
+                let num2=Math.round(Math.random()*10);
+                
+
+                addRandom.innerHTML=`${num1} +${num2} =  `;
+                
+                
+            }
+        }
+        function fnc1(){
+            let x =Math.round(Math.random()*10);
+            let y=Math.round(Math.random()*10);
+
+            // const add=x+y;
+            // random.innerHTML=`${num1} +${num2} = ${add}`;
+
+            // const sub=x-y;
+            // random.innerHTML=`${num1} -${num2} = ${sub}`;
+
+            const mul=x*y;
+            random.innerHTML=`${num1} *${num2} = ${mul}`;
+
+            // const div=x/y;
+            // random.innerHTML=`${num1} /${num2} = ${div}`;
+
+        }
+    </script>
+</head>
+<body>
+    <div>
+        <button onclick="fnc()"> Quiz Addition of two random</button>
+
+        <label id="addRandom"></label>
+    </div>
+    <br>
+    <br>
+    <div>
+        <button onclick="fnc1()">Advance Calculations</button>
+        <label id="random"></label>
+    </div>
+    
+</body>
+</html>

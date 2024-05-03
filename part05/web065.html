@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    function fnc(){
+      // p1.innerHTML="Hello WOrld";
+      // document.getElementById("p2").innerHTML="Good Afternoon";
+      // document.querySelector("p2").innerHTML="Good Evening";
+      // let msg = document.getElementById("p1")
+      // let messages=document.getElementsByTagName("p")
+      // console.log(msg)
+      // msg.style.background="yellow";
+      // let messages=document.querySelectorAll("p");
+      let messages=document.querySelectorAll(".c1");
+      for(let i=0;i<messages.length;i++)
+      {
+        messages[i].style.background="yellow";
+      }
+      // console.log(messages)
+     
+    }
+    
+  </script>
+</head>
+<body>
+    <p id="p1" class="c1">This is pargraph</p>
+    <p id="p2" class="c1">This is second pargarph</p>
+    <p id="p2" class="c1">This ia third pargarph</p>
+    <button onclick="fnc()">Click</button>
+
+
+
+</body>
+</html>
