@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // function add(x , y){
+        //     console.log(x+y)
+        // }
+        // add(5 , 7)
+
+        function add(){
+            let sum=0;
+            for(let i=0;i<arguments.length;i++)
+            {
+                sum=sum+arguments[i]
+            }
+            console.log(sum)
+        }
+        add(5 , 7 , 2, 8 ,9)
+        // we use this method whn we doesn't know how may arguments will be there
+
+        function add(...args){
+            let sum=0;
+            for(let i=0;i<args.length;i++)
+            {
+                sum=sum+args[i]
+            }
+            console.log(sum)
+        }
+        add(5 , 7 , 2, 8 ,9)
+        // we can give any name , ex: ...a , replace in evry position
+
+    </script>
+</body>
+</html>
