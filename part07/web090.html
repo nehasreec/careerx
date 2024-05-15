@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="">
+        <h1 id="scoreBoard"> Score</h1>
+        <div class="block1">
+            <div class="b1">
+                <p>Fruits</p>
+                <p>Press Left key</p>
+            </div>
+            <div class="items">
+            </div>
+            <div class="b2">
+                <p>Vegetables</p>
+                <p>Press Right key</p>
+            </div>
+        </div>
+        <div class="block2">
+            <h2>Instructions</h2>
+            <p>Press left key if the image is a fruit</p>
+            <p>Press left key if the image is a vegetable</p>
+        </div>
+    </div>
+    <script>
+        let items = document.getElementsByClassName(".items");
+        let products=[
+            {
+            id : 1,
+            name:"apple",
+            image:" /image/apple.png",
+            cid:0
+        },
+        {
+            id :2,
+            name:" beans",
+            image: "/image/beans.jpg",
+            cid:1
+        },
+        {
+            id :3,
+            name:"cabbage",
+            image: "/image/cabbage.png",
+            cid:1
+        },
+        {
+            id : 4,
+            name: "carrot",
+            image: "/image/carrot.jpg",
+            cid:1,
+        },{
+            id : 5,
+            name:"orange",
+            image: "image/orange.jpg",
+            cid:0,
+        },
+        {
+            id : 6,
+            name:"tomato",
+            image:"image/tomato.png",
+            cid:1,
+        },
+        {
+            id : 7,
+            name:"apple",
+            image:" /image/apple.png",
+            cid:0
+        },
+        {
+            id :8,
+            name:" beans",
+            image: "/image/beans.jpg",
+            cid:1
+        },
+        {
+            id :9,
+            name:"cabbage",
+            image: "/image/cabbage.png",
+            cid:1
+        },
+        {
+            id : 10,
+            name: "carrot",
+            image: "/image/carrot.jpg",
+            cid:1,
+        },
+
+    ];
+    let cid = 0;
+    let score=0;
+    let index=0;
+    let nextItem = () =>{
+        index =Math.round(Math.random()*9);
+        console.log(products[index].cid);
+        items.innerHTML = ` <div> <img width ='150px' src=${products[index].image}></div>
+        <div>${products[index].name}<div>`
+    };
+    let b= document.body;
+    b.onkeydown =(e) =>{
+        cid=products[index].cid;
+        console.log(cid);
+        if (e.key == "ArrowLeft" && cid === 0) {
+          score++;
+        } else if (e.key == "ArrowRight" && cid === 1) {
+          score++;
+        }
+        scoreCard.innerHTML = "score" +score;
+        nextItem();
+    };
+    nextItem();
+    </script>
+</body>
+</html>

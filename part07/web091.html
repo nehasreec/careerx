@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="vehicle">vehicle
+        <div id="car">Car
+            <div id="toyota">Toyota</div>
+
+        </div>
+        <script>
+              vehicle.addEventListener("click" , ()=>{
+                alert("vehicle");
+            }, {capture:true});
+            car.addEventListener("click" , ()=>{
+                alert("car");
+            },{capture:false})
+            toyota.addEventListener("click" , ()=>{
+                alert("Toyoto");
+            },{capture:false})
+            //event capturing
+            //bubble effect
+            // byfault false
+
+            // vehicle.addEventListener("click" , ()=>{
+            //     alert("vehicle");
+            // });
+            // car.addEventListener("click" , ()=>{
+            //     alert("car");
+            // })
+            // toyota.addEventListener("click" , ()=>{
+            //     alert("Toyoto");
+            // })
+        </script>
+    </div>
+</body>
+</html>
