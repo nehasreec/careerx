@@ -4,114 +4,201 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+      *{
+        
+       
+        align-items: center;
+        /* border: 1.5px solid black;
+        width:800px; */
+       
+    
+      }
+      .main{
+        margin-top: 20px;
+        padding:30px;
+        width:800px;
+        background-color:#e0e2db;
+        border-radius: 10px;
+        height: 500px;
+      }
+
+      .nav{
+        display:flex;
+        justify-content: space-between;
+        margin-left: 60px;
+        margin-right: 60px;
+      }
+      h1 , .reset{
+        margin-top:50px;
+        text-align: left;
+        
+        background-color: rgb(89, 85, 85);
+        color: white;
+        width:150px;
+        padding:5px;
+        border-radius: 5px;
+      }
+      .block1{
+        display:flex;
+        /* grid-template-columns: auto auto auto ; */
+        justify-content: space-evenly;
+        column-gap: 30px;
+        padding:20px;
+        align-items: center;
+        background-color:#e0e2db;
+      
+
+      }
+      button{
+        /* border: 1.5px solid black; */
+        width:150px;
+        height:40px;
+        padding :10px;
+        text-align: center;
+        border-radius: 5px;
+        background-color:#e6af2e;
+        color:black;
+        font-size:15px;
+
+      }
+      .items{
+        background-color:#e0e2db;
+      }
+      /* .veg{
+        border: 1.5px solid rgb(0, 0, 0);
+        width:150px;
+        height:40px;
+        padding: 10px;
+        border-radius: 5px;
+        background-color:#e6af2e;
+        color: black;
+
+      } */
+      h2{
+        background-color:#e6af2e;
+    
+      }
+      p{
+        font-size: 20px;
+        justify-content: space-around;
+      }
+
+      .rules{
+        /* position: center; */
+        border:1.5px solid black;
+        width:400px;
+        height:150px;
+        align-items: center;
+        background-color:#e0e2db;
+      }
+      .rules h2{
+        width:350px;
+        border-radius:5px;
+      }
+      .products .name{
+        text-align: center; 
+        font-size: 30px;     
+      }
+
+    </style>
 </head>
 <body>
     <div class="">
-        <h1 id="scoreBoard"> Score</h1>
+      <center>
+      <div class="main">
+        <div class="nav">
+        <h1 id="scoreCard">Score :</h1>
+        <h1 class="reset" onclick="showItems()">Reset</h1>
+        </div>
         <div class="block1">
-            <div class="b1">
-                <p>Fruits</p>
-                <p>Press Left key</p>
+            <div class="fruits">
+                <button>< Fruit </button>
             </div>
-            <div class="items">
+            <div class="items"></div>
+            <div class="veg">
+                <button>Vegetables ></button>
             </div>
-            <div class="b2">
-                <p>Vegetables</p>
-                <p>Press Right key</p>
+          </div>
+          <br>
+        
+          <center>
+            <div class="rules">
+                <h2>Instruction</h2>
+               
+              
+                  <i> - Press left key if it is a Fruit</i><br><br>
+                  <i> - Press right key if it is a Vegetables</i>
+                
+              
             </div>
-        </div>
-        <div class="block2">
-            <h2>Instructions</h2>
-            <p>Press left key if the image is a fruit</p>
-            <p>Press left key if the image is a vegetable</p>
-        </div>
+            </center>
+          </div>
+        </center>
     </div>
-    <script>
-        let items = document.getElementsByClassName(".items");
-        let products=[
-            {
-            id : 1,
-            name:"apple",
-            image:" /image/apple.png",
-            cid:0
-        },
-        {
-            id :2,
-            name:" beans",
-            image: "/image/beans.jpg",
-            cid:1
-        },
-        {
-            id :3,
-            name:"cabbage",
-            image: "/image/cabbage.png",
-            cid:1
-        },
-        {
-            id : 4,
-            name: "carrot",
-            image: "/image/carrot.jpg",
-            cid:1,
-        },{
-            id : 5,
-            name:"orange",
-            image: "image/orange.jpg",
-            cid:0,
-        },
-        {
-            id : 6,
-            name:"tomato",
-            image:"image/tomato.png",
-            cid:1,
-        },
-        {
-            id : 7,
-            name:"apple",
-            image:" /image/apple.png",
-            cid:0
-        },
-        {
-            id :8,
-            name:" beans",
-            image: "/image/beans.jpg",
-            cid:1
-        },
-        {
-            id :9,
-            name:"cabbage",
-            image: "/image/cabbage.png",
-            cid:1
-        },
-        {
-            id : 10,
-            name: "carrot",
-            image: "/image/carrot.jpg",
-            cid:1,
-        },
 
+    <script>
+        let items = document.querySelector('.items');
+        let products= [
+        {name:"apple", img: './image/apple-slice-03.png', cid:0 },
+        {name:"mango", img: './image/mango-slice-05.png', cid:0},
+        {name:"banana", img: './image/banana-01.png', cid:0},
+        {name:"grapes", img: './image/green-grapes-04.png', cid:0},
+        {name:"guava", img: './image/guava-slice-03.png', cid:0},
+        {name:"pineapple", img: './image/half-pineapple-04(1).png', cid:0},
+        {name:"kiwi", img: './image/hardy-kiwi-05.png', cid:0},
+        {name:"orange", img: './image/orange-slice-02.png', cid:0},
+        {name:"strawberry", img: './image/strawberry-03.png', cid:0},
+        {name:"watermelon", img: './image/watermelon-slice-05.png', cid:0},
+        {name: "potato",img: './image/potato-05.png', cid:1},
+        { name: "tomato", img: './image/tomatoes-02.png' , cid:1},
+        { name: "onion", img: './image/onion-03.png' , cid:1},
+        { name: "cucumber", img: './image/cucumbers-03.png', cid:1 },
+        { name: "carrot", img: './image/carrots-03.png' , cid:1},
+        { name: "beetroot", img: './image/beetroot-02.png', cid:1 },
+        { name: "capsicum", img: './image/capsicum-02.png', cid:1 },
+        { name: "broccoli", img: './image/broccoli-01.png', cid:1 },
+        { name: "cauliflower", img: './image/cauliflower-03.png', cid:1 },
+        
+        { name: "spinach", img: './image/spinach-03.png', cid:1 }
     ];
-    let cid = 0;
-    let score=0;
-    let index=0;
-    let nextItem = () =>{
-        index =Math.round(Math.random()*9);
-        console.log(products[index].cid);
-        items.innerHTML = ` <div> <img width ='150px' src=${products[index].image}></div>
-        <div>${products[index].name}<div>`
-    };
-    let b= document.body;
-    b.onkeydown =(e) =>{
-        cid=products[index].cid;
-        console.log(cid);
-        if (e.key == "ArrowLeft" && cid === 0) {
-          score++;
-        } else if (e.key == "ArrowRight" && cid === 1) {
-          score++;
-        }
-        scoreCard.innerHTML = "score" +score;
-        nextItem();
-    };
-    nextItem();
+
+     
+        
+        let cid= 0;
+        let score= 0;
+        let index =0;
+
+        const showItems =() =>{
+            index=Math.round(Math.random ()* products.length);
+            console.log(products[index].cid);
+            let txt = `<div>
+                <div><img width='150px' src=${products[index].img}></div>
+                <div>${products[index].name}</div>
+                </div>`;
+            items.innerHTML =txt;
+        };
+
+        let b= document.body;
+        b.onkeydown =(e) =>{
+            cid = products[index].cid;
+            console.log(cid);
+            if( e.key == "ArrowLeft" && cid===0)
+            {
+                score++;
+            }
+            else if(e.key =="ArrowRight" && cid===1)
+            {
+                score++;
+            }
+            scoreCard.innerHTML =   "Score: " +score;
+            showItems();
+
+        };
+
+        showItems();
     </script>
 </body>
 </html>
+
+
