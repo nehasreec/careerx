@@ -112,12 +112,12 @@
         <h1 class="reset" onclick="showItems()">Reset</h1>
         </div>
         <div class="block1">
-            <div class="fruits">
-                <button>< Fruit </button>
+            <div class="fruits" id="fruit">
+                <button onclick="lkey()">< Fruit </button>
             </div>
             <div class="items"></div>
-            <div class="veg">
-                <button>Vegetables ></button>
+            <div class="veg" id="vege">
+                <button onclick="rkey()">Vegetables ></button>
             </div>
           </div>
           <br>
@@ -186,16 +186,43 @@
             if( e.key == "ArrowLeft" && cid===0)
             {
                 score++;
+                
+                showItems();
             }
             else if(e.key =="ArrowRight" && cid===1)
             {
                 score++;
             }
             scoreCard.innerHTML =   "Score: " +score;
-            showItems();
+            // showItems();
 
         };
+        function lkey(){
+            
+              if( cid===0)
+              {
+                  score++;
+                  // fruit.style.backgroundColor='green';
+              }
+             
+              scoreCard.innerHTML =   "Score: " +score;
+              showItems();
 
+      
+            };
+
+            function rkey(){
+            
+            if( cid===1)
+            {
+                score++;
+            }
+           
+            scoreCard.innerHTML =   "Score: " +score;
+            showItems();
+
+    
+          };
         showItems();
     </script>
 </body>

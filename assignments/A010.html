@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- <i class="fa-brands fa-facebook"></i> -->
     <title>Facebook</title>
-    <!-- <link rel="Stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer"> -->
+    <link rel="Stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
     <script>
         function mainhidden(){
             let v=document.getElementById("page1");
@@ -38,11 +40,14 @@
             {
                 let strName=found.name
                 welcome.innerHTML=`Hello ${strName}`;
+                welcome.style.fontSize="15px";
                 // welcome.innerHTML="Welcome ";
             }
             else
             {
                 welcome.innerHTML="Access denied";
+                welcome.style.fontSize="15px";
+                welcome.style.backgroundColor="#fff";
             }
 
         }
@@ -85,9 +90,10 @@
             align-content: center;
         } */
         .main{
+            background-color: #f5f5f5;
             display:flex;
             justify-content: space-evenly;
-            /* width:100%; */
+          /* width:100%;   */
             /* margin:0;
             display:flex;
             justify-content: center;
@@ -115,13 +121,21 @@
             margin-top: 150px;
             background-color:#fff;
             border: 1px solid #fff;
-            height: 300px;
+            height: 330px;
             width:340px;
             padding:15px;
             border-radius:8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             
         }
+        .login-b1{
+            background-color: #fff;
+        }
+        .login-b2{
+            background-color: #fff;
+        }
+        
+
         input[type=email ], [type=password]{
             height:32px;
             width:94%;
@@ -130,7 +144,7 @@
             padding: 5px;
             font-size: 16px;
             color:#333;
-            background-color: transparent;
+            background-color: #fff;
         }
         button{
             height:38px;
@@ -144,7 +158,7 @@
         }
         a{
             text-align: center;
-            background-color: transparent;
+            background-color: #fff;
         }
         .b2{
             background-color: rgb(19, 191, 71);
@@ -154,29 +168,53 @@
 
         }
         .Sign-up{
+            margin: auto;
             /* height: 600px;
             width: 1080px; */
             position:relative;
+            background-color: #fff;
 
         }
+        .sign{
+            display:flex;
+            justify-content: space-between;
+            margin: left;
+            padding: 5px;
+            background-color: #fff;
+        }
+        .Sign-up .centerdiv .sign h2{
+            font-size: 23px;
+            background-color: #fff;
 
+        }
+        i{
+            width: 50px;
+            height: 10px;
+            background-color: #fff;
+            margin-top: 15px;
+        }
        .centerdiv{
-            margin:none;
+            margin:auto;
             align-items: center;
             border-radius: 10px;
             padding:15px;
             background-color:#fff;
             width:350px;
-            height: 450px;
+            height: 470px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
            
        }
+       .sign-b1{
+        background-color: #fff;
+       }
        
-       .sign-b1 .input [type=text]{
-            border:none;
+       .sign-b1 input[type="text"]{
+            border: 1px solid #ccc;
             padding:3px;
             height: 20px;
-       }
+            background-color: #fff;
+            border-radius: 3px;
+      }
        p{
         font-size: 10px;
         font-family:Arial, Helvetica, sans-serif;
@@ -186,8 +224,15 @@
        }
        .signtext{
         font-size: 15px;
-        background-color: transparent;
+        background-color: #fff;
         font-family: Arial, Helvetica, sans-serif;
+        margin-left: 5px;
+       }
+       .sign-b2{
+        background-color: #fff;
+       }
+       .sign-b3{
+        background-color: #fff;
        }
        #page2 {
             z-index: 1;
@@ -236,12 +281,12 @@
                     <br><br>
                     <div class="pwd">
                         <input type="password" id="loginPw" placeholder="Password">
-                        <i class="fa-regular fa-eye"></i>
+                        <!-- <i class="fa-regular fa-eye"></i> -->
                     </div>
-                    <br><br>
+                    <br>
                     <button onclick="fnc()">Log in</button>
                     <br><br>
-                    <center><a  href="#" >Forgotten password ?</a><br></center>
+                    <center><a  href="#" style="background-color: #fff">Forgotten password ?</a><br></center>
                 </div>
                 <hr>
                 <br>
@@ -250,36 +295,42 @@
                 </div>
             </div>
         </div>
-        <center>
+        
         <div id="page2" class="Sign-up">
             <div class="centerdiv">
-                <h2 style="background-color: transparent;">Sign Up</h2>
+                <div class="sign">
+                    <h2>Sign Up</h2>
+                    <i onclick="mainvisible()" class="fa-solid fa-xmark"></i>
+                </div>
                 <div class="signtext">It's quick and easy</div>
                 <hr>
                 <div class="sign-b1">
                     <input type="text" id="regFname" placeholder="First name">
+                
                     <input type="text" id="refSname" placeholder="Surname">
-                </div>
+                </div> <br>
                 <div class="sign-b2">
                     <input type="email" id="regEmail" placeholder="Mobile number or email address">
-                    <input type="password" id="regPw" placeholder="New Password">
+                    <br><br>
+                    <input type="password" id="regPw" placeholder="New Password"><br><br>
                     
                 </div>
+               
                 <div class="sign-b3">
                     
-                    <h3>Gender</h3>
-                    Female<input type="radio" id="gender" required>
-                    Male<input type="radio" id="gender" required>
-                    Custom<input type="radio" id="gender" required>
+                    <h3 style="background-color: #fff;">Gender</h3>
+                    <input type="radio" id="gender" >Female
+                    <input type="radio" id="gender" >Male
+                   <input type="radio" id="gender">Custom
                     
                 </div>
                 <p>People who use our service may have uploaded your contact information to Facebook. <a href="#">Learn more</a>.
                 </p>
                 <P>By clicking Sign Up, you agree to our <a href="#">Terms</a>,<a href="#"> Privacy Policy </a>and <a href="#">Cookies Policy.</a> You may receive SMS notifications from us and can opt out at any time.</P>
-                <button onclick="register()" ondblclick ="mainvisible()">Sign Up</button>
+                <button onclick="register()">Sign Up</button>
             </div>
         </div>
-        </center>
+        
     
 </body>
 </html>

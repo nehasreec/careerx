@@ -7,14 +7,14 @@
 </head>
 <body>
     <table border="1" id="myTable">
-        <tr><th>Subject</th><th>marks</th></tr>
-        <tr><td>Telugu</td><td>67</td></tr>
-        <tr><td>Maths</td><td>98</td></tr>
+        <tr><th>Subject</th><th>marks</th><th>marks</th></tr>
+        <tr><td>Telugu</td><td>67</td><td>67</td></tr>
+        <tr><td>Maths</td><td>98</td><td>67</td></tr>
     </table>
 
     <script>
         for(let i=0 ; i<myTable.rows.length ;i++){
-            let marks =myTable.rows[i].cells[1];
+            let marks =myTable.rows[i].cells[2];
             if(marks.innerHTML < 80){
                 marks.style.backgroundColor ="red";
             }
